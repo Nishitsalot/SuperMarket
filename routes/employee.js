@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
     let sql = `INSERT INTO employee VALUES (${req.body.id}, '${req.body.number}', '${req.body.name}', '${req.body.address}', '${req.body.city}');`;
     con.query(sql, (err, result) => {
         if(err) res.send(err);
-        else res.redirect("/place_order");
+        else res.redirect("/order");
     });
 });
 
