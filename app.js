@@ -103,4 +103,8 @@ app.get("/", (req, res) => {
 app.use("/customers", require("./routes/customers"));
 app.use("/place_order", require("./routes/place_order"));
 
+app.use("/employee", require("./routes/employee"));
+app.use("/order", require("./routes/order"));
+app.use("/display1", require("./routes/display1"));
+
 app.listen(3000);

@@ -18,10 +18,10 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
     console.log(req.body);
-    let sql = `INSERT INTO employee VALUES (${req.body.id}, '${req.body.number}', '${req.body.name}', '${req.body.address}', '${req.body.city}');`;
+    let sql = `INSERT INTO employee VALUES (${req.body.e_id}, '${req.body.contact}', '${req.body.name}', '${req.body.address}', '${req.body.city}', 04/04/2019);`;
     con.query(sql, (err, result) => {
         if(err) res.send(err);
-        else res.redirect("/order");
+        else res.redirect("/display1");
     });
 });
 
