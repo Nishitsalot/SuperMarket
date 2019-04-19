@@ -18,15 +18,15 @@
         </thead>
         <% if (result) { %>
         <tbody>
-            <% result.forEach(result => { %>
+            <% result.forEach(results => { %>
             <tr>
-                <td><%= result.ProductID %></td>
-                <td><%= result.Cost %></td>
-                <td><%= result.Quantity %></td>
-                <td><%= result.total_cost %></td>
-                <td><%= result.OrderID %></td>
-                <td><%= result.orderdate %></td>
-                <td><%= result.CustomerID %></td>
+                <td><%= results.ProductID %></td>
+                <td><%= results.Cost %></td>
+                <td><%= results.Quantity %></td>
+                <td><%= results.total_cost %></td>
+                <td><%= results.OrderID %></td>
+                <td><%= results.orderdate %></td>
+                <td><%= results.CustomerID %></td>
 
             </tr>
             <% }); %>

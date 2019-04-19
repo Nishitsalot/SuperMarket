@@ -14,7 +14,8 @@ const con = mysql.createConnection({
 
 
 router.get("/", (req, res) => {
-    con.query(`SELECT * FROM ${constants.orderdetails}`, (err, result) => {
+    con.query(`SELECT * FROM ${constants.order_table}`, (err, result) => {
+        console.log(result);
         res.render("results",{result});
     });
 });
