@@ -107,6 +107,6 @@ app.use("/update1", require("./routes/update1"));
 app.use("/employee", require("./routes/employee"));
 app.use("/order", require("./routes/order"));
 app.use("/display1", require("./routes/display1"));
-
+app.use("/update2", require("./routes/update2"));
 
 app.listen(3000);
