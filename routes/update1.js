@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
                SET   ContactNo = '${req.body.number}', CustomerName ='${req.body.name}', Address = '${req.body.address}', City='${req.body.city}' 
               WHERE  CustomerID= ${req.body.id} ;`  ;
     con.query(sql, (err, result) => {
-        if(err) res.send(err);
+        if(err) res.redirect("/update1");
         else res.redirect("/place_order");
     });
 });

@@ -22,8 +22,8 @@ router.post("/", (req, res) => {
                SET   contactno = '${req.body.contact}', EmployeeName ='${req.body.name}', Address = '${req.body.address}', City='${req.body.city}' 
               WHERE  EmployeeID= ${req.body.e_id} ;`  ;
     con.query(sql, (err, result) => {
-        if(err) res.send(err);
-        else res.redirect("/");
+        if(err) res.redirect("/update2");
+        else res.redirect("/display2");
     });
 });
 

@@ -103,10 +103,11 @@ app.get("/", (req, res) => {
 app.use("/customers", require("./routes/customers"));
 app.use("/place_order", require("./routes/place_order"));
 app.use("/update1", require("./routes/update1"));
+app.use("/delete", require("./routes/delete"));
 
 app.use("/employee", require("./routes/employee"));
 app.use("/order", require("./routes/order"));
 app.use("/display1", require("./routes/display1"));
 app.use("/update2", require("./routes/update2"));
-
+app.use("/display2", require("./routes/display2"));
 app.listen(3000);

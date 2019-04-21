@@ -12,18 +12,20 @@ const con = mysql.createConnection({
     database: constants.db
 });
 
-router.get("/", (req, res) => {
-    res.render("customer");
+router.get("/", (req, res) => {             
+    res.render("Delete");
 });
 
 router.post("/", (req, res) => {
     console.log(req.body);
-    let sql = `INSERT INTO customers VALUES (${req.body.id}, '${req.body.number}', '${req.body.name}', '${req.body.address}', '${req.body.city}');`;
+    let sql =` DELETE From orderdetails
+                    WHERE  CustomerID= ${req.body.c_id}  ;`  ;
+    
     con.query(sql, (err, result) => {
-        if(err) res.redirect("\customers");
-        else res.redirect("/place_order");
+        if(err) res.redirect("/delete");
+        else res.redirect("/");
     });
 });
 
 module.exports = router;
-//router.get("\" , (req,res)) => {res.render("customer");});
+//router.get("\" , (req,res)) => {res.render("customer");})

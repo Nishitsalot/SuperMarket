@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="heading-1 text-center mt-3">Order Details</div>
+
+    <table class="table table-bordered table-text-centered table-no-padding mt-3">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">EmployeeID</th>
+                <th scope="col">Contact No</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+             
+
+            </tr>
+        </thead>
+        <% if (result) { %>
+        <tbody>
+            <% result.forEach(results1 => { %>
+            <tr>
+                <td><%= results1.EmployeeID %></td>
+                <td><%= results1.contactno %></td>
+                <td><%= results1.EmployeeName %></td>
+                <td><%= results1.Address %></td>
+                <td><%= results1.City %></td>
+          
+            </tr>
+            <% }); %>
+        </tbody>
+        <% } %>
+    </table>
+</div>
